@@ -1,0 +1,290 @@
+/* screen size ipad where width is 768px*/
+@media (max-width: 768px) {
+
+    /*- top bar of header */
+    .header .top_bar1 p {
+        font-size: 1rem;
+    }
+
+    /*- nav bar of header */
+    .navbar .blank-div {
+        display: none;
+    }
+    .navbar {
+        padding: 0 10px;
+    }
+
+
+    .navbar .icon {
+        font-size: 1.5rem;
+    }
+
+    /* hero section */
+    .hero {
+        width: 90%;
+    }
+
+    .hero-title {
+        font-size: 3.7rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .btn {
+        display: inline;
+    }
+
+    .hero-button {
+        font-size: 1.3rem;
+    }
+
+    /* full text section */
+    .full_text {
+        margin-bottom: 30px;
+    }
+
+    .full_text h1 {
+        font-size: 38px;
+    }
+
+    /* welcome k=photography page*/
+    .outer-div {
+        padding: 0 20px;
+    }
+
+    .outer-div h3 {
+        font-size: 2.1rem;
+    }
+
+    .outer-div p {
+        font-size: 1.08rem;
+    }
+
+    /* gallery */
+    .gallery {
+        padding: 50px;
+        padding-bottom: 15px;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(45% - 20px);
+    }
+
+    .gallery-text p {
+        padding: 0 20px;
+    }
+
+    /* memory content */
+    .memory-content {
+        padding-top: 0;
+        gap: 2px;
+    }
+
+    /* contact page 1 */
+    .contact-page1 {
+        padding: 0 20px;
+    }
+
+    .contact-page1 .page1-content {
+        margin-bottom: 50px;
+    }
+
+    /* categeory section 2*/
+    .categeory {
+        padding: 0 20px;
+    }
+
+    .categeory .part {
+        width: 45vw;
+    }
+
+    /* contact page 2 */
+    .contact-page2 {
+        padding: 0 20px;
+    }
+
+    .contact-page2 .left h4 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .contact-page2 .left p {
+        font-size: 1.2rem;
+    }
+
+    form p {
+        font-size: 0.9rem;
+    }
+
+
+
+    /* categeory section*/
+    .card-container {
+        padding: 60px 50px;
+    }
+
+
+
+
+
+}
+
+/* screen size iphone size where width is 430px*/
+@media (max-width: 431px) {
+
+    /*- top bar of header */
+    .header .top_bar1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header .top_bar1 p {
+        font-size: 1rem;
+    }
+
+    /*- nav bar of header */
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar .blank-div {
+        display: none;
+    }
+
+    .header .navbar .logo h1 {
+        font-size: 1rem;
+    }
+
+    .navbar .icon {
+        width: fit-content;
+        display: flex;
+        /* border: 2px solid; */
+        font-size: 1.5rem;
+    }
+
+    /* hero section */
+    .hero {
+        width: 96%;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .btn {
+        display: inline;
+    }
+
+    .hero-button {
+        font-size: 1.3rem;
+    }
+
+    /* full text section */
+    .full_text {
+        margin-bottom: 10px;
+    }
+
+    .full_text h1 {
+        font-size: 26px;
+    }
+
+    /* welcome page */
+    .outer-div h3 {
+        font-size: 1.7rem;
+    }
+
+    /* gallery */
+    .gallery {
+        padding: 30px;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+    }
+
+    /* memory content */
+    .memory {
+        flex-direction: column;
+    }
+
+    /* blog*/
+    .blog {
+        padding: 0;
+        text-align: center;
+    }
+
+    .blog h4 {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    /* contact page 1 */
+    .contact-page1 h3 {
+        text-align: left;
+    }
+
+    .contact-page1 .page1-content {
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .contact-page1 .page1-content {
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    .contact-page1 .contact-partLeft {
+        width: 100%;
+    }
+
+    .contact-page1 .contact-partRight {
+        width: 100%;
+    }
+
+    /* categeory section*/
+    .categeory .part {
+        width: 100%;
+    }
+        /* categeory section*/
+        .card-container {
+            padding: 60px 10px;
+        }
+    
+
+    /* contact section 2 */
+    .contact-page2 {
+        flex-direction: column;
+    }
+
+    .contact-page2 .left {
+        width: 100%;
+    }
+
+    .contact-page2 .right {
+        width: 100%;
+    }
+
+
+
+}

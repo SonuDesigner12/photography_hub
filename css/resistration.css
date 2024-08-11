@@ -1,0 +1,205 @@
+/* General Styles */
+form {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  transform: scale(1.3);
+}
+
+input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 4px auto;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+  background-color: #004494;
+}
+
+/* Error Messages */
+span[class$="-error"] {
+  color: red;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+  animation: fadeIn 0.5s;
+}
+
+a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+
+/* use chatgpt */
+
+/* Apply a modern background color and style to the form */
+form {
+  background-color: #f7f7f7; /* Light grey background */
+  border-radius: 8px;       /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;            /* Padding around the form */
+  max-width: 600px;         /* Maximum width of the form */
+  margin: 20px auto;        /* Center the form horizontally */
+  font-family: Arial, sans-serif; /* Modern font */
+}
+
+/* Style input fields and textarea */
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], input[type="time"], textarea, select {
+  width: 100%;              /* Full width input fields */
+  padding: 10px;           /* Padding inside fields */
+  border: 1px solid #ccc;  /* Light border */
+  border-radius: 4px;      /* Rounded corners for input fields */
+  margin-bottom: 10px;     /* Space below each field */
+  box-sizing: border-box;  /* Include padding and border in width calculation */
+}
+
+/* Style labels */
+label {
+  display: block;          /* Make labels block elements */
+  margin-bottom: 5px;     /* Space below labels */
+  font-weight: bold;       /* Bold text for labels */
+}
+
+/* Style error messages */
+span[class$="-error"] {
+  color: red;              /* Red color for error messages */
+  font-size: 0.875em;      /* Slightly smaller text size */
+  display: block;          /* Make error messages block elements */
+  margin-top: -10px;       /* Space above error messages */
+  margin-bottom: 10px;     /* Space below error messages */
+}
+
+/* Style the submit and reset buttons */
+.btn input[type="submit"], .btn input[type="reset"] {
+  background-color: #007bff; /* Primary color for buttons */
+  color: white;              /* White text on buttons */
+  border: none;              /* Remove border */
+  padding: 10px 20px;        /* Padding inside buttons */
+  border-radius: 4px;        /* Rounded corners for buttons */
+  cursor: pointer;           /* Pointer cursor on hover */
+  font-size: 16px;           /* Font size for button text */
+}
+
+.btn input[type="submit"]:hover, .btn input[type="reset"]:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style the 'Have an account?' link */
+.signin a {
+  color: #007bff;           /* Match link color with button */
+  text-decoration: none;    /* Remove underline */
+}
+
+.signin a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.validation_error {
+  color: black;
+  height: 135px;
+  width: 310px;
+  background: #f0f00ef0;
+  position: absolute;
+  top: 80px;
+  left: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  display: none;
+}
+.validation_error.show {
+display: flex;
+}
+

@@ -1,0 +1,961 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* top bar 1 style */
+
+.header .top_bar1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 45px;
+    align-items: center;
+    border-bottom: 5px solid skyblue;
+
+}
+
+.header .top_bar1 p {
+    text-align: center;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    color: #000000a8;
+
+}
+
+.header .top_bar1 p span {
+    color: #000;
+    font-weight: 600;
+}
+
+.header button {
+    padding: 5px 20px;
+    background: transparent;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.header button:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* top bar 2 style */
+.header .top_bar2 {
+    background: #9b0404;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.header .top_bar2 p {
+    letter-spacing: 1.5px;
+}
+
+/* navbar style */
+.navbar {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header .navbar .logo {
+    border: 1px solid rgb(87, 85, 85);
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.navbar .icon {
+    width: 100px;
+    position: relative;
+    z-index: 99;
+}
+.navbar i {
+    color: #9b0404;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/* hero section*/
+.hero {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    display: flex;
+    gap: 20px;
+
+}
+
+.hero-image {
+    width: 60%;
+    height: 66vh;
+}
+
+.custom-image {
+    max-width: 24rem;
+    /* This corresponds to the 'max-w-sm' class */
+    border-radius: 0.5rem;
+    /* This corresponds to the 'rounded-lg' class */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* This corresponds to the 'shadow-2xl' class */
+}
+
+.hero-text h4 {
+    color: #9b0404;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    /* text-align: center; */
+    font-family: math;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.hero-description {
+    margin-bottom: 15px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #020202;
+    /* btn-primary */
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    text-transform: capitalize;
+
+}
+
+.hero-button:hover {
+    background-color: #fbfbfb;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+/* full text  section start*/
+.full_text {
+    background: black;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden;
+    height: fit-content;
+    display: flex;
+    flex-shrink: 0;
+    margin-bottom: 50px;
+
+}
+
+.full_text .text {
+    flex-shrink: 0;
+}
+
+.full_text h1 {
+    letter-spacing: 3px;
+    font-size: 55px;
+    font-weight: 100;
+    padding: 0;
+    padding-right: 30px;
+    font-family: math;
+    text-transform: uppercase;
+    word-spacing: 25px;
+
+}
+
+/* welcome page */
+
+.outer-div {
+    padding: 20px 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.outer-div h4 {
+    text-align: left;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #950909;
+}
+
+.outer-div img {
+    width: 100%;
+}
+
+.outer-div h3,
+.outer-div p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #323131;
+}
+
+.outer-div p {
+    font-size: 0.7rem;
+    padding-top: 0;
+}
+
+/* gallery */
+.gallery-box {
+    margin-bottom: 20px;
+}
+
+
+.gallery-text p {
+    text-transform: uppercase;
+    color: #950909;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0 100px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-evenly;
+    padding: 0 100px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(31.333% - 20px);
+    width: 360px;
+    box-sizing: border-box;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.show-btn {
+    text-align: center;
+    cursor: pointer;
+}
+
+.show-btn a,
+.show-btn i {
+    color: #950909;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: cursive;
+    font-weight: 100;
+    text-transform: capitalize;
+
+}
+
+.show-btn a:hover {
+    color: #570b0b;
+}
+
+.show-btn i {
+    padding-right: 5px;
+}
+
+/* review section*/
+.review-box {
+    width: 100%;
+    height: 220px;
+    background-color: rgba(241, 76, 76, 0.801);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url("https://homesweethomemaker.org/wp-content/uploads/2020/06/self-care.png?w=820&h=312&crop=1");
+    background-size: 103% 100%;
+    background-repeat: no-repeat;
+
+
+}
+
+.review-box .content p {
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 2.4px;
+
+}
+
+.review-box .content button {
+    border: none;
+    padding: 10px;
+    color: white;
+    background: #0000007d;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/* memory section */
+
+.memory {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.memory_img {
+    width: 100%;
+
+}
+
+.memory_img img {
+    width: 100%;
+}
+
+.memory-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 10px;
+    width: 100%;
+
+
+}
+
+.memory-content h4 {
+    font-weight: 100;
+    color: #950909;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+
+}
+
+.memory-content h1 {
+    font-family: fangsong;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.1rem;
+}
+
+.memory-content p {
+    font-size: 0.8rem;
+    color: rgb(65, 64, 64);
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.memory-content button {
+    padding: 9px 18px;
+    border: 1px solid transparent;
+    background: black;
+    color: white;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.memory-content button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* blog*/
+.blog {
+    height: 150px;
+    padding: 25px 100px;
+    position: relative;
+}
+
+.blog h4 {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9b0404;
+    font-weight: 400;
+}
+
+.blog .blog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* contanct page */
+.contact-page1 {
+    padding: 0 100px;
+
+}
+
+.contact-page1 .page1-content {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.contact-page1 h3 {
+    text-align: center;
+    font-weight: 100;
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.contact-page1 .contact-partLeft {
+    /* height: 60vh; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    /* justify-content: center; */
+    padding-top: 45px;
+}
+
+.contact-page1 .contact-partLeft h2 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.contact-page1 .contact-partLeft p {
+    font-size: 1.1rem;
+    color: #000000a8;
+    text-align: justify;
+    width: 90%;
+}
+
+.contact-page1 .contact-partLeft p span {
+    color: #950909;
+}
+
+.contact-partRight {
+    width: 50%;
+    padding-top: 50px;
+}
+
+.contact-partRight img {
+    width: 100%;
+}
+
+
+/* contact show image content */
+.categeory .img1 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkTdkzDiVHseca96E4rHABPTgBKyODcxFunDSsv4w2vnIzhor");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.categeory .img2 {
+    background-image: url("../image/man1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.categeory .img3 {
+    background-image: url("https://www.goodtherapy.org/blog/blog/wp-content/uploads/2024/03/AdobeStock_104817188-300x200.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.categeory .part h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* contact page 2 */
+
+.contact-page2 {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.contact-page2 .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.contact-page2 .left h4 {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: red;
+}
+
+.contact-page2 .left p {
+    font-size: 0.8rem;
+    color: #000000c2;
+    width: 80%;
+}
+
+.contact-page2 .right h3 {
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* form style*/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+form small {
+    color: red;
+}
+
+.contact-page2 .right {
+    width: 50%;
+}
+
+.contact-page2 .right .form-field {
+    margin-bottom: 15px;
+}
+
+.contact-page2 .right input,
+textarea {
+    height: 40px;
+    width: 45vw;
+    font-size: 1.05rem;
+    padding-left: 5px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+
+}
+
+form .file {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-page2 .right button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.contact-page2 .right button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+form p {
+    font-size: 0.7rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    padding: 20px 2px;
+    text-transform: capitalize;
+
+}
+
+form p span {
+    color: #9b0404;
+}
+
+/* footer section*/
+.footer .testimonial-boxes {
+    width: 100%;
+    height: 400px;
+    background: #7d7d7d5c;
+    margin-bottom: 35px;
+    background-image: url(../image/footerimg1);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+
+.footer .testimonial-boxes p {
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 1.1px;
+    color: white;
+    letter-spacing: 3px;
+
+
+}
+
+.footer .footer-contact {
+    height: 315px;
+    background: #7d7d7d5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-image: url("https://www.lovinggraceradio.net/wp-content/uploads/0918-21-960x400.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+.footer .footer-contact input {
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(255 255 255);
+    width: 25vw;
+    margin-left: 50px;
+
+
+
+}
+.footer form {
+    width: 100%;
+}
+.footer .form-field {
+    margin: 10px auto;
+}
+.footer .login_btn {
+    margin: 20px auto;
+}
+
+.footer .footer-contact button {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: auto;
+}
+
+.footer .footer-contact button:hover {
+    color: white;
+    background-color: black;
+
+}
+
+
+
+
+/* put funcnality in gallery section */
+ 
+.image_box1 { 
+    /* border: 5px solid red; */
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    display: none;
+}
+/* content hide css */
+.show_galery {
+    display: inline-flex;
+}
+ 
+/* responsive image box modal*/
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 100px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card {
+    padding: 5px;
+    width: 320px;
+    border-radius: 20px;
+    background: #e8e8e8;
+    transition: 0.4s;
+}
+
+.card:hover {
+    translate: 0 -10px;
+}
+
+
+.card-image {
+    min-height: 70vh;
+    background-color: #ffffff70;
+    border-radius: 20px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkTdkzDiVHseca96E4rHABPTgBKyODcxFunDSsv4w2vnIzhor");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.card-image h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    color: darkviolet;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Basic styles for modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* new morder footer deisgn */
+
+/* Basic Reset and Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer {
+    /* background: #333; */
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .testimonial-boxes {
+    font-style: italic;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer-nav {
+    margin-bottom: 20px;
+  }
+  
+  .footer-link {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+  }
+  
+  .footer-icons {
+    margin-bottom: 20px;
+  }
+  
+  .footer-icon {
+    color: #a5a4a4;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+  
+  .footer-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  
+  .footer-icon:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+  }
+  
+  .footer-aside {
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  /* using chatgpt code of style */
+
+/* Basic Logo Styling */
+.logo {
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  transform: scale(0.9);
+  animation: scaleColorChange 1s ease-in-out forwards;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Keyframes for Scaling and Color Transition */
+@keyframes scaleColorChange {
+  from {
+    transform: scale(0.9);
+    color: #333;
+  }
+  to {
+    transform: scale(1);
+    color: #1e90ff; /* Change to your desired color */
+  }
+}
+
+/* Hover Effect */
+.logo h1:hover {
+  color: #ff4500; /* Change to your desired hover color */
+  transform: scale(1.2); /* Slightly enlarge */
+}
+
+/* all validation show error
+*/
+.form-field span {
+    color: red;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.form-field span i {
+    color: seagreen;
+}
+form .submit-error {
+    color: red;
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
