@@ -1,0 +1,268 @@
+const submit_data = document.querySelector("#submit_data");
+const dobInput = document.getElementById('dob');
+submit_data.addEventListener("click", function (e) {
+    
+    console.log("submit btn click");
+    isValid = true;
+    
+    // validate all input field
+    nameValidate();
+    passwordValidate();
+    emailValidate();
+    phoneValidate();
+    // dob validate
+    const dob = new Date(dobInput.value);
+    if (validateDOB(dob)) {
+        // Allow login
+        console.log('You are 18 or older. Login allowed.');
+        document.getElementById("dob").style.border = "1px solid green";
+        document.querySelector(".dob-error").innerHTML = "";
+
+    }else if(dobInput.value == "") {
+        // alert("Please enter your date of birth");
+        document.getElementById("dob").style.border = "1px solid red";
+        document.querySelector(".dob-error").innerHTML = "Please enter your date of birth";
+        isValid = false;
+    
+    } 
+    else {
+        // Block login
+        console.log('You are under 18. Login blocked.');
+        document.getElementById("dob").style.border = "1px solid red";
+        document.querySelector(".dob-error").innerHTML = "You are under 18. Login blocked";
+        isValid = false;
+
+    }
+    // dob validation end 
+    //validate time
+    timeValidate();
+    // validate upload file
+    uploadFileValidate();
+    // comment validate
+    commentValidate();
+    // select box validation
+    // selectBoxValidate();
+
+    formValidate(e);
+
+
+
+});
+
+// function for field validation
+function nameValidate() {
+    let name = document.getElementById("name").value.trim();
+    if (name === "") {
+        console.log("name is required");
+        document.getElementById("name").style.border = "1px solid red";
+        document.querySelector(".name-error").innerHTML = "name is required";
+        isValid = false;
+
+    } else if (name.length < 3) {
+        console.log("name should be at least 3 characters");
+        document.getElementById("name").style.border = "1px solid red";
+        document.querySelector(".name-error").innerHTML = "name should be at least 3 characters";
+        isValid = false;
+
+    } else {
+        console.log("name is valid");
+        document.getElementById("name").style.border = "1px solid green";
+        document.querySelector(".name-error").innerHTML = "";
+
+    }
+}
+
+// enter only string password
+function passwordValidate() {
+    let password = document.getElementById("password").value;
+    if (password === "") {
+        console.log("password is required");
+        document.getElementById("password").style.border = "1px solid red";
+        document.querySelector(".password-error").innerHTML = "password is required";
+        isValid = false;
+
+    } else if (password.length < 6) {
+        console.log("password should be at least 6 characters");
+        document.getElementById("password").style.border = "1px solid red";
+        document.querySelector(".password-error").innerHTML = "password should be at least 6 characters";
+        isValid = false;
+
+    } else if (!password.match(/(?=.*[a-z])(?=.*[A-Z])/)) {
+        console.log("password should contain at least one lowercase and one uppercase letter");
+        document.getElementById("password").style.border = "1px solid red";
+        document.querySelector(".password-error").innerHTML = "password should contain at least one lowercase and one uppercase letter";
+        isValid = false;
+
+    } else {
+        console.log("password is valid");
+        document.getElementById("password").style.border = "1px solid green";
+        document.querySelector(".password-error").innerHTML = "";
+
+    }
+}
+
+function phoneValidate() {
+    let phone = document.getElementById("phone").value;
+    if (phone == "") {
+        console.log("phone is required");
+        document.getElementById("phone").style.border = "1px solid red";
+        document.querySelector(".phone-error").innerHTML = "phone number is required";
+        isValid = false;
+
+    } else if (phone.length < 10 || phone.length > 10) {
+        console.log("phone number should be 10 digits");
+        document.getElementById("phone").style.border = "1px solid red";
+        document.querySelector(".phone-error").innerHTML = "phone number should be 10 digits";
+        isValid = false;
+
+    } else {
+        console.log("phone number is valid");
+        document.getElementById("phone").style.border = "1px solid green";
+        document.querySelector(".phone-error").innerHTML = "";
+    }
+}
+
+function emailValidate() {
+    let email = document.getElementById("email").value;
+    // let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]/ ;
+    if (email === "") {
+        console.log("email is required");
+        document.getElementById("email").style.border = "1px solid red";
+        document.querySelector(".email-error").innerHTML = "email is required";
+        isValid = false;
+
+    } else if (email.indexOf('@') <= 0) {
+        console.log("invalid position of @ wirte correct email");
+        document.getElementById("email").style.border = "1px solid red";
+        document.querySelector(".email-error").innerHTML = "invalid position of @ write correct email";
+        isValid = false;
+
+    } else if (email.lastIndexOf('.') !== email.length - 4 && email.lastIndexOf('.') !== email.length - 3) {
+        console.log("invalid email");
+        document.getElementById("email").style.border = "1px solid red";
+        document.querySelector(".email-error").innerHTML = "invalid email";
+        isValid = false;
+
+    } else {
+        console.log("email is valid");
+        document.getElementById("email").style.border = "1px solid green";
+        document.querySelector(".email-error").innerHTML = "";
+
+    }
+}
+
+function validateDOB() {
+    // Get the date of birth input
+    const dobInput = document.getElementById('dob');
+    const dob = new Date(dobInput.value);
+
+    // Get the current date
+    const currentDate = new Date();
+
+    // Calculate the age
+    const age = calculateAge(dob, currentDate);
+
+    // Check if the age is 18 or older
+    if (age >= 18) {
+        // Allow login
+        console.log('You are 18 or older. Login allowed.');
+        return true;
+    } else {
+        // Block login
+        console.log('You are under 18. Login blocked.');
+        return false;
+    }
+
+    // Function to calculate age
+    function calculateAge(dob, currentDate) {
+        // Calculate the difference in years
+        const years = currentDate.getFullYear() - dob.getFullYear();
+
+        // Check if the current month and day is before the birth month and day
+        if (currentDate.getMonth() < dob.getMonth() ||
+            (currentDate.getMonth() === dob.getMonth() && currentDate.getDate() < dob.getDate())) {
+            return years - 1;
+        } else {
+            return years;
+        }
+    }
+}
+
+function timeValidate() {
+    // Get the time input
+    const timeInput = document.getElementById('time');
+    if(timeInput.value == "") {
+        console.log("time is required");
+        document.getElementById("time").style.border = "1px solid red";
+        document.querySelector(".time-error").innerHTML = "Please enter your time";
+        isValid = false;
+    }else {
+        console.log("time is valid");
+        document.getElementById("time").style.border = "1px solid green";
+        document.querySelector(".time-error").innerHTML = "";
+    }
+}
+
+// check box
+function checkSport() {
+
+}
+
+function uploadFileValidate() {
+    var fileInput = document.getElementById("file");
+    if(fileInput.files.length === 0) {
+        console.log("file is required");
+        document.getElementById("file").style.border = "1px solid red";
+        document.querySelector(".file-error").innerHTML = "Please select a file";
+        isValid = false;
+
+    }else {
+        console.log("file is valid");
+        document.getElementById("file").style.border = "1px solid green";
+        document.querySelector(".file-error").innerHTML = "";
+
+    }
+}
+
+function commentValidate() {
+    var commentInput = document.getElementById("textarea").value;
+    if(commentInput == "") {
+        console.log("comment is required");
+        document.getElementById("textarea").style.border = "1px solid red";
+        document.querySelector(".comment-error").innerHTML = "Please enter your comment";
+        isValid = false;
+
+    }else {
+        console.log("comment is valid");
+        document.getElementById("textarea").style.border = "1px solid green";
+        document.querySelector(".comment-error").innerHTML = "";
+    }
+}
+
+function selectBoxValidate() {
+    var selectBox = document.getElementById("selectBox");
+    if(selectBox == "Select your option") {
+        console.log("select is required");
+        document.getElementById("selectbox").style.border = "1px solid red";
+        document.querySelector("#selectbox-error").innerHTML = "choose your option";
+        isValid = false;
+
+    }else {
+        console.log("select is valid");
+        document.getElementById("selectbox").style.border = "1px solid green";
+        document.querySelector(".selectbox-error").innerHTML = "";
+    }
+}
+
+function formValidate(e) {
+    if(!isValid) {
+        e.preventDefault();
+        alert("something went wrong. Try again");
+        return false;
+    }else {
+        alert("form validate now ready to send data into the server");
+        return true;
+    }
+}
+
+
